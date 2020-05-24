@@ -1,5 +1,7 @@
 console.log('main javascript loaded!!')
 
+
+//Jquery functions
 document.addEventListener("DOMContentLoaded", () => {
     // Get all "navbar-burger" elements
     const $navbarBurgers = Array.prototype.slice.call(
@@ -24,12 +26,15 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
-document.addEventListener('DOMContentLoaded', () => {
-    (document.querySelectorAll('.notification .delete') || []).forEach(($delete) => {
-        $notification = $delete.parentNode;
+document.querySelector('form').addEventListener('submit', function(event) {
+    var modal = document.querySelector('.modal'); // assuming you have only 1
+    var html = document.querySelector('html');
+    modal.classList.add('is-active');
+    html.classList.add('is-clipped');
 
-        $delete.addEventListener('click', () => {
-            $notification.parentNode.removeChild($notification);
-        });
+    modal.querySelector('.modal-background').addEventListener('click', function(e) {
+        e.preventDefault();
+        modal.classList.remove('is-active');
+        html.classList.remove('is-clipped');
     });
 });

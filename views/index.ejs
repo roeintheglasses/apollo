@@ -1,70 +1,103 @@
-<!DOCTYPE html>
-<html lang="en">
+<section>
+    <div class="hero is-danger is-bold is-fullheight">
+        <!-- Hero head: will stick at the top -->
+        <div class="hero-head">
+            <nav class="navbar is-danger" role="navigation" aria-label="main navigation">
+                <div class="container">
+                    <div class="navbar-brand">
+                        <a class="navbar-item">
+                            <h1 class="title">
+                                Apollo
+                            </h1>
+                        </a>
+                        <span class="navbar-burger burger" data-target="navbarMenuHeroA">
+                            <span></span>
+                        <span></span>
+                        <span></span>
+                        </span>
+                    </div>
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Apollo</title>
-    <link rel="stylesheet" href="/bulma/bulma.min.css" />
-    <script src="https://kit.fontawesome.com/fcfa154dc8.js" crossorigin="anonymous"></script>
-
-    <style>
-        body::-webkit-scrollbar {
-            width: 0 !important;
-        }
-    </style>
-</head>
-
-<body>
-    <section>
-        <div class="hero is-danger is-bold is-fullheight">
-            <!-- Hero head: will stick at the top -->
-            <div class="hero-head">
-                <nav class="navbar is-danger" role="navigation" aria-label="main navigation">
-                    <div class="container">
-                        <div class="navbar-brand">
-                            <a class="navbar-item">
-                                <h1 class="title">
-                                    Apollo
-                                </h1>
+                    <div id="navbarMenuHeroA" class="navbar-menu has-text-centered">
+                        <div class="navbar-end">
+                            <!-- <a class="navbar-item">
+                                    About
+                                </a> -->
+                            <span class="navbar-item">
+                                <a class="button is-danger is-outlined is-inverted is-fullwidth"
+                                    href="https://github.com/roeintheglasses/humanity">
+                                    <span class="icon">
+                                        <i class="fab fa-github"></i>
+                                    </span>
+                            <span>Star Me</span>
                             </a>
-                            <span class="navbar-burger burger" data-target="navbarMenuHeroA">
-                                <span></span>
-                            <span></span>
-                            <span></span>
                             </span>
                         </div>
-
-                        <div id="navbarMenuHeroA" class="navbar-menu has-text-centered">
-                            <div class="navbar-end">
-                                <a class="navbar-item">
-                                    About
-                                </a>
-                                <span class="navbar-item">
-                                    <a class="button is-danger is-outlined is-inverted is-fullwidth"
-                                        href="https://github.com/roeintheglasses/humanity">
-                                        <span class="icon">
-                                            <i class="fab fa-github"></i>
-                                        </span>
-                                <span>Star Me</span>
-                                </a>
-                                </span>
-                            </div>
-                        </div>
                     </div>
-                </nav>
+                </div>
+            </nav>
+        </div>
+        <!-- Hero content: will be in the middle -->
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <!-- Main Page -->
+                <div class="columns">
+                    <div class="column is-4">
+                        <img src="/assets/girl-music.png" width="512" height="512" alt="music-girl" />
+                    </div>
+                    <div class="column is-1"></div>
+                    <div class="column">
+                        <br><br><br>
+                        <h1 class="title">
+                            Apollo
+                        </h1>
+                        <h2 class="subtitle">
+                            download music without bounds
+                        </h2>
+                        <form action="/download" method="POST" class="box">
+                            <div class="field">
+                                <div class="control has-icons-left">
+                                    <input id="downloadInput" name="downloadInput" type="text" placeholder="Enter song name here!" class="input is-fullwidth" required />
+                                    <span class="icon is-small is-left">
+                                        <i class="fas fa-download"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="control">
+                                    <button type="submit" id="showModal" class="button is-danger is-fullwidth">Download</button>
+                                </div>
+                            </div>
+                        </form>
+                        <div id="modal-id" class="modal modal-fx-fadeInScale">
+                            <div class="modal-background"></div>
+                            <div class="modal-content box">
+                                <p class="title is-6 has-text-dark	">Downloading, Please wait few seconds.</p>
+                                <progress class="progress is-danger" max="100">30%</progress>
+
+                            </div>
+                            <button class="modal-close is-large" aria-label="close"></button>
+                        </div>
+                        <span>
+                            <a class="bmc-button" target="_blank"
+                                href="https://www.buymeacoffee.com/roeintheglasses"><img
+                                    src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg"
+                                    alt="Buy me a coffee"><span style="margin-left:5px;font-size:28px !important;">Buy
+                                    me a coffee</span></a>
+                        </span>
+                    </div>
+                    <div class="column is-1"></div>
+                </div>
+                <!--/ Main Page -->
             </div>
-            <!-- Hero content: will be in the middle -->
-            <div class="hero-body">
-                <div class="container has-text-centered">
-                    <!-- Main Page -->
-                    <p>Hello World!</p>
-                    <!--/ Main Page -->
+        </div>
+        <div class="hero-foot has-text-centered">
+            <div class="has-background-light" style="padding-bottom:15px;padding-top:10px">
+                <div class="field">
+                    <p class="title is-5 has-text-dark">
+                        Created with ❤️ by <a href="https://www.github.com/roeintheglasses">Hrishi Jangir</a>
+                    </p>
                 </div>
             </div>
         </div>
-    </section>
-</body>
-<script src="/js/main.js"></script>
-
-</html>
+    </div>
+</section>

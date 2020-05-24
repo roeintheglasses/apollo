@@ -4,7 +4,8 @@
     "description": "Fast and Simple music downloader",
     "main": "app.js",
     "scripts": {
-        "start": "node src/app.js"
+        "start": "node src/app.js",
+        "dev": "env-cmd -f ./config/dev.env nodemon src/app.js"
     },
     "repository": {
         "type": "git",
@@ -22,10 +23,14 @@
     },
     "homepage": "https://github.com/roeintheglasses/apollo#readme",
     "dependencies": {
+        "alerts-css": "^1.0.2",
         "bulma": "^0.8.2",
+        "bulma-modal-fx": "^1.1.1",
         "ejs": "^3.1.3",
         "express": "^4.17.1",
+        "express-ejs-layouts": "^2.5.0",
         "fluent-ffmpeg": "^2.1.2",
+        "simple-youtube-api": "^5.2.1",
         "ytdl-core": "^2.1.4"
     },
     "devDependencies": {
