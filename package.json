@@ -1,0 +1,35 @@
+{
+  "name": "apollo",
+  "version": "1.0.0",
+  "description": "Fast and Simple music downloader",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/roeintheglasses/apollo.git"
+  },
+  "keywords": [
+    "music",
+    "download",
+    "apollo"
+  ],
+  "author": "Hrishi Jangir",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/roeintheglasses/apollo/issues"
+  },
+  "homepage": "https://github.com/roeintheglasses/apollo#readme",
+  "dependencies": {
+    "bulma": "^0.8.2",
+    "ejs": "^3.1.3",
+    "express": "^4.17.1",
+    "fluent-ffmpeg": "^2.1.2",
+    "ytdl-core": "^2.1.4"
+  },
+  "devDependencies": {
+    "env-cmd": "^10.1.0",
+    "nodemon": "^2.0.4"
+  }
+}
