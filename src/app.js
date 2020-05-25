@@ -55,7 +55,7 @@ app.get('*', (req, res) => {
 
 //Download function
 function download(req, res) {
-    const name = req.body.downloadInput + " Audio Only";
+    const name = req.body.downloadInput + " audio";
     var saveLocation = name + '-byApollo.mp3';
     console.log("Name in download function : ", name);
     youtube.search(name, limit = 1).then(async(results) => {
