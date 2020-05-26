@@ -2,10 +2,10 @@
 const express = require("express");
 const path = require("path");
 const ffmpeg = require("fluent-ffmpeg");
-const Youtube = require("simple-youtube-api");
 const ytdl = require("ytdl-core")
 const expressLayouts = require('express-ejs-layouts');
 const fs = require('fs');
+const youtube = require('scrape-youtube').default;
 
 //Path and Env variables Setup
 const port = process.env.PORT || 3000;
@@ -16,9 +16,6 @@ const bulmaModalsPath = path.join(__dirname, "../node_modules/bulma-modal-fx/dis
 
 //Express consts
 const app = express();
-
-//youtube const
-const youtube = new Youtube(youtubeApiKey);
 
 // Express & ejs Setup
 app.use(express.static(publicDirectoryPath));
@@ -58,8 +55,8 @@ function download(req, res) {
     const name = req.body.downloadInput + " audio";
     var saveLocation = name + '-byApollo.mp3';
     console.log("Name in download function : ", name);
-    youtube.search(name, limit = 1).then(async(results) => {
-        const link = results[0].url
+    youtube.searchOne(name).then(result => {
+        const link = result.link
         console.log("Got link: " + link);
         var stream = ytdl(link);
         var proc = new ffmpeg({
@@ -74,24 +71,25 @@ function download(req, res) {
                         console.error(err)
                         return
                     }
+                    //Deleting File after sending it to the user
                     fs.unlink(saveLocation, (err) => {
                         if (err) {
                             console.error(err)
                             return
                         }
                         console.log("File Deleted!")
-                            //file removed
                     });
                 });
             })
             .on('error', function(err, stdout, stderr) {
-                console.log('an error happened: ' + err.message);
+                console.log('Error in proc: ' + err.message);
             })
             .saveToFile(saveLocation);
+    }).catch(error => {
+        console.log('Error in search : ' + error.message);
     })
     return saveLocation;
 }
-
 
 //Server start
 app.listen(port, console.log("Server running at port " + port));
