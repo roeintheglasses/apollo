@@ -5,7 +5,7 @@
     "main": "app.js",
     "scripts": {
         "start": "node src/app.js",
-        "dev": "env-cmd -f ./config/dev.env nodemon src/app.js --trace-warnings"
+        "dev": "nodemon src/app.js"
     },
     "repository": {
         "type": "git",
@@ -33,7 +33,6 @@
         "ytdl-core": "^2.1.4"
     },
     "devDependencies": {
-        "env-cmd": "^10.1.0",
         "nodemon": "^2.0.4"
     }
 }

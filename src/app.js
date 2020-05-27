@@ -9,7 +9,6 @@ const youtube = require('scrape-youtube').default;
 
 //Path and Env variables Setup
 const port = process.env.PORT || 3000;
-const youtubeApiKey = process.env.YOUTUBE_API_KEY;
 const publicDirectoryPath = path.join(__dirname, "../public");
 const bulmaPath = path.join(__dirname, "../node_modules/bulma/css/");
 const bulmaModalsPath = path.join(__dirname, "../node_modules/bulma-modal-fx/dist/");
@@ -28,7 +27,6 @@ app.set("view engine", "ejs");
 app.use(express.urlencoded({
     extended: false
 }));
-
 
 //Routes
 app.get("/", (req, res) => {
@@ -68,7 +66,7 @@ function download(req, res) {
                 console.log('file has been converted succesfully');
                 res.download(saveLocation, function(err) {
                     if (err) {
-                        console.error(err)
+                        console.log(err)
                         return
                     }
                     //Deleting File after sending it to the user
