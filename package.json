@@ -23,8 +23,8 @@
     },
     "homepage": "https://github.com/roeintheglasses/apollo#readme",
     "dependencies": {
-        "bulma": "^0.8.2",
-        "bulma-modal-fx": "^1.1.1",
+        "alerts-css": "^1.0.2",
+        "bulma": "^0.9.0",
         "ejs": "^3.1.3",
         "express": "^4.17.1",
         "express-ejs-layouts": "^2.5.0",
