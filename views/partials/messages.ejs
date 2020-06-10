@@ -1,0 +1,13 @@
+<% if (typeof(error)!="undefined") { %>
+    <div class="field alert alert_danger" style="animation-delay: .5s">
+        <div class="alert--icon">
+            <i class="fas fa-exclamation-circle"></i>
+        </div>
+        <div class="alert--content">
+            <%= error %>
+        </div>
+        <div class="alert--close">
+            <i class="far fa-times-circle"></i>
+        </div>
+    </div>
+    <% } %>

@@ -1,147 +1,50 @@
 <section>
-    <div class="hero is-danger is-bold is-fullheight">
+    <div class="hero is-info is-bold is-fullheight">
         <!-- Hero head: will stick at the top -->
-        <div class="hero-head">
-            <nav class="navbar is-danger" role="navigation" aria-label="main navigation">
-                <div class="container">
-                    <div class="navbar-brand">
-                        <a class="navbar-item" href="/">
-                            <h1 class="title">
-                                <i class="fas fa-headphones"></i>
-                            </h1>
-                        </a>
-                        <span class="navbar-burger burger" data-target="navbarMenuHeroA">
-                            <span></span>
-                        <span></span>
-                        <span></span>
-                        </span>
-                    </div>
+        <%- include ( 'partials/navbar') %>
 
-                    <div id="navbarMenuHeroA" class="navbar-menu has-text-centered">
-                        <div class="navbar-end">
-                            <!-- <a class="navbar-item">
-                                    About
-                                </a> -->
-                            <span class="navbar-item">
-                                <a class="button is-danger is-outlined is-inverted is-fullwidth"
-                                    href="https://github.com/roeintheglasses/humanity">
-                                    <span class="icon">
-                                        <i class="fab fa-github"></i>
-                                    </span>
-                            <span>Star Me</span>
-                            </a>
+            <!-- Hero content: will be in the middle -->
+            <div class="hero-body">
+                <div class="container has-text-centered">
+                    <!-- Main Page -->
+                    <h1 class="title">
+                        <i class="fas fa-headphones"></i> Apollo
+                    </h1>
+                    <h2 class="subtitle">
+                        Download music and videos without bounds
+                    </h2>
+                    <br><br><br>
+                    <div class="columns">
+                        <div class="column is-4">
+                            <a href="/music">
+                                <figure class="image is-512x512">
+                                    <img src="/assets/girl-music.png" alt="music-girl" />
+                                </figure>
+                                <span class="navbar-item">
+                                <a href="/music" class="button is-info is-outlined is-inverted is-fullwidth">
+                                    Download Music
+                                </a>
                             </span>
+                            </a>
                         </div>
-                    </div>
-                </div>
-            </nav>
-        </div>
-        <!-- Hero content: will be in the middle -->
-        <div class="hero-body">
-            <div class="container has-text-centered">
-                <!-- Main Page -->
-                <div class="columns">
-                    <div class="column is-4">
-                        <figure class="image is-512x512">
-                            <img src="/assets/girl-music.png" alt="music-girl" />
-                        </figure>
-                    </div>
-                    <div class="column is-1"></div>
-                    <div class="column">
-                        <br><br><br>
-                        <h1 class="title">
-                            <i class="fas fa-headphones"></i> Apollo
-                        </h1>
-                        <h2 class="subtitle">
-                            Download music without bounds
-                        </h2>
-                        <form action="/download" method="POST" class="box">
-                            <div class="field">
-                                <div class="control has-icons-left">
-                                    <input id="downloadInput" name="downloadInput" type="text" placeholder="song-name artist-name" class="input is-fullwidth" required />
-                                    <span class="icon is-small is-left">
-                                        <i class="fas fa-download"></i>
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="field">
-                                <div class="control">
-                                    <button type="submit" class="button is-danger is-fullwidth">Download</button>
-                                </div>
-                            </div>
-                            <br>
-                            <div class="field">
-                                <div class="columns">
-                                    <div class="column">
-                                        <div class="control">
-                                            <a class="button is-fullwidth is-danger" href="https://twitter.com/intent/tweet?text=https://apollomusic.ga&hashtags=apollomusic">
-                                                <span class="icon is-small is-left">
-                                                    <i class="fab fa-twitter"></i>
-                                                </span>
-                                                <span>
-                                                    Tweet #ApolloMusic
-                                                </span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="column">
-                                        <div class="control">
-                                            <a class="button is-fullwidth is-danger" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fapollomusic.ga%2F&amp;src=sdkpreparse">
-                                                <span class="icon is-small is-left">
-                                                    <i class="fab fa-facebook"></i>
-                                                </span>
-                                                <span>
-                                                    Share on facebook!
-                                                </span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                        <div id="modal-id" class="modal modal-fx-fadeInScale">
-                            <div class="modal-background"></div>
-                            <div class="modal-content box">
-                                <p class="title is-6 has-text-dark	">Downloading, Please wait few seconds.</p>
-                                <progress class="progress is-danger" max="100">30%</progress>
-
-                            </div>
-                            <button class="modal-close is-large" aria-label="close"></button>
-                        </div>
-
-                        <div class="columns">
-                            <div class="column">
-                                <a href="https://forms.gle/X28RvGdqhNfhfmah8" class="title button is-fullwidth is-danger is-light is-6 has-text-dark">
-                                    <span>
-                                        Want a new feature ? Tell me here.
-                                    </span>
+                        <div class="column is-4"></div>
+                        <div class="column is-4">
+                            <a href="/videos">
+                                <figure class="image is-512x512">
+                                    <img src="/assets/girl-video.png" alt="music-girl" />
+                                </figure>
+                                <span class="navbar-item">
+                                <a href="/music" class="button is-info is-outlined is-inverted is-fullwidth">
+                                    Download Youtube Videos
                                 </a>
-                            </div>
-                            <div class="column">
-                                <a class="button is-fullwidth title is-6 has-text-dark" target="_blank" href="https://www.buymeacoffee.com/roeintheglasses">
-                                    <span class="icon is-small is-left">
-                                        <i class="fas fa-mug-hot"></i>
-                                    </span>
-                                    <span>Buy me a coffee</span>
-                                </a>
-                            </div>
+                            </span>
+                            </a>
                         </div>
-
                     </div>
-                    <div class="column is-1"></div>
+                    <!--/ Main Page -->
                 </div>
-                <!--/ Main Page -->
             </div>
-        </div>
-        <div class="hero-foot has-text-centered">
-            <div class="has-background-black">
-                <p class="has-text-white">
-                    Created with ❤️ by <a href="https://www.github.com/roeintheglasses">Hrishi Jangir</a>
-                </p>
-                <p class="has-text-white">
-                    Illustrations by <a href="https://iconscout.com/contributors/delesign/illustrations">Delesign</a>
-                </p>
-            </div>
-        </div>
+            <%- include ( 'partials/footer') %>
+
     </div>
 </section>
