@@ -26,15 +26,11 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
-document.querySelector('form').addEventListener('submit', function(event) {
-    var modal = document.querySelector('.modal'); // assuming you have only 1
-    var html = document.querySelector('html');
-    modal.classList.add('is-active');
-    html.classList.add('is-clipped');
+document.querySelector('form').addEventListener('submit', function (event) {
+    var progress = document.querySelector('progress'); // assuming you have only 1
+    progress.classList.toggle('is-invisible');
 
-    modal.querySelector('.modal-background').addEventListener('click', function(e) {
-        e.preventDefault();
-        modal.classList.remove('is-active');
-        html.classList.remove('is-clipped');
-    });
+    setTimeout(function () {
+        progress.classList.toggle('is-invisible');
+    }, 5000)
 });
