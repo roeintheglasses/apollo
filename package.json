@@ -23,6 +23,7 @@
     },
     "homepage": "https://github.com/roeintheglasses/apollo#readme",
     "dependencies": {
+        "@fortawesome/fontawesome-free": "^5.14.0",
         "alerts-css": "^1.0.2",
         "bulma": "^0.9.0",
         "ejs": "^3.1.3",

@@ -8,6 +8,8 @@ const port = process.env.PORT || 3000;
 const publicDirectoryPath = path.join(__dirname, "../public");
 const bulmaPath = path.join(__dirname, "../node_modules/bulma/css/");
 const alertsPath = path.join(__dirname, "../node_modules/alerts-css/assets/");
+const fontawesomePath = path.join(__dirname, "../node_modules/@fortawesome/fontawesome-free/");
+
 
 //Setting express routes
 const indexRoute = require('../routes/indexRoute');
@@ -30,6 +32,7 @@ app.use(express.urlencoded({
 app.use('/', indexRoute);
 app.use('/download', downloadRoute);
 app.use('/bulma', express.static(bulmaPath));
+app.use('/fa', express.static(fontawesomePath));
 app.use("/alerts", express.static(alertsPath));
 app.get('*', (req, res) => {
     res.render('404')

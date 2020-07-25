@@ -26,11 +26,3 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
-document.querySelector('form').addEventListener('submit', function (event) {
-    var progress = document.querySelector('progress'); // assuming you have only 1
-    progress.classList.toggle('is-invisible');
-
-    setTimeout(function () {
-        progress.classList.toggle('is-invisible');
-    }, 5000)
-});
