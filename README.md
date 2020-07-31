@@ -12,8 +12,7 @@
 [![forthebadge](https://forthebadge.com/images/badges/powered-by-electricity.svg)](https://forthebadge.com)
 
 
-## A simple tool to Help you decide what you need. 
-
+## A simple web app that allows you to easily download music and videos from youtube.
 [![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/roeintheglasses/icantdecide.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/roeintheglasses/icantdecide/context:javascript)
 
 ### Development
